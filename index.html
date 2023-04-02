@@ -2,12 +2,21 @@
 <html>
 <head>
 <style>
-    .likebtn-button.lb-like.lb-counter-clickable.lb-voted {
+    .likebtn-wrapper .lb-like::before {
+        content: "";
+        display: inline-block;
+        position: absolute;
+        z-index: -1;
+        width: 150%; /* Ajusta el valor según la anchura deseada */
+        height: 100%;
+        left: -25%; /* Ajusta la posición horizontal del pseudo-elemento */
+        background-color: rgba(255, 208, 134, 0.61);
         border-radius: 50%;
     }
 
     .likebtn-wrapper .lb-counter {
-        margin-left: 5px; /* Ajusta el valor según la cantidad de espacio que desees */
+        margin-left: 15px;
+        background-color: transparent !important;
     }
 </style>
 </head>
@@ -20,4 +29,3 @@
     </div>
 </body>
 </html>
-
